@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AQ.GameSaver", "AQ.GameSaver\AQ.GameSaver.csproj", "{BE71135F-0443-40F1-9704-74B9F41CE767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AQ.GameSaver.Tests", "AQ.GameSaver.Tests\AQ.GameSaver.Tests.csproj", "{CEF338D7-3B25-41B7-AE61-049D99F156E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AQ.GameSaver.GUI", "AQ.GameSaver.GUI\AQ.GameSaver.GUI.csproj", "{12837BD6-EE2B-4FF3-90AB-6FB8BF2C1F7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE71135F-0443-40F1-9704-74B9F41CE767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE71135F-0443-40F1-9704-74B9F41CE767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE71135F-0443-40F1-9704-74B9F41CE767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE71135F-0443-40F1-9704-74B9F41CE767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF338D7-3B25-41B7-AE61-049D99F156E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF338D7-3B25-41B7-AE61-049D99F156E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF338D7-3B25-41B7-AE61-049D99F156E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF338D7-3B25-41B7-AE61-049D99F156E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12837BD6-EE2B-4FF3-90AB-6FB8BF2C1F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12837BD6-EE2B-4FF3-90AB-6FB8BF2C1F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12837BD6-EE2B-4FF3-90AB-6FB8BF2C1F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12837BD6-EE2B-4FF3-90AB-6FB8BF2C1F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
