@@ -63,7 +63,7 @@
     <Compile Include="Repositories\ScoreCardRepository.cs" />
     <Compile Include="Score Card\CampaignMap.cs" />
     <Compile Include="Score Card\Enums\CircleType.cs" />
-    <Compile Include="Score Card\MedalWinner.cs" />
+    <Compile Include="Score Card\Medals.cs" />
     <Compile Include="Score Card\ScoreCard.cs" />
     <Compile Include="Score Card\Title.cs" />
   </ItemGroup>

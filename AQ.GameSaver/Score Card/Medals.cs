@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AQ.GameSaver.Score_Card
 {
-    public class MedalWinner
+    public class Medals
     {
 
     }

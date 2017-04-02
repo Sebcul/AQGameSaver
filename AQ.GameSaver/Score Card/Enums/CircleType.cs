@@ -3,6 +3,7 @@
     public enum CircleType
     {
         InnerCircle,
-        OuterCircle
+        OuterCircle,
+        FinalShowdown
     }
 }
