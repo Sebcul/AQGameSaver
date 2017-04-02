@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AQ.GameSaver", "AQ.GameSave
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AQ.GameSaver.Tests", "AQ.GameSaver.Tests\AQ.GameSaver.Tests.csproj", "{CEF338D7-3B25-41B7-AE61-049D99F156E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AQ.GameSaver.GUI", "AQ.GameSaver.GUI\AQ.GameSaver.GUI.csproj", "{12837BD6-EE2B-4FF3-90AB-6FB8BF2C1F7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AQ.GameSaver.App", "AQ.GameSaver.GUI\AQ.GameSaver.App.csproj", "{12837BD6-EE2B-4FF3-90AB-6FB8BF2C1F7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
