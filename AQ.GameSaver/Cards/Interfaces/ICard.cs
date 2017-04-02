@@ -4,6 +4,7 @@ namespace AQ.GameSaver.Cards.Interfaces
 {
     public interface ICard
     {
-        Guid Id { get;}
+        Guid Id { get; }
+        string Name { get; }
     }
 }

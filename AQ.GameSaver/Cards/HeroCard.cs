@@ -21,6 +21,7 @@ namespace AQ.GameSaver.Cards
             Name = name;
             Life = life;
             Defense = defense;
+            HasTeam = false;
         }
 
         public Guid Id { get; }
@@ -30,6 +31,7 @@ namespace AQ.GameSaver.Cards
         public IEnumerable<AttackCard> AttackCards { get { return _attackCards; } }
         public IEnumerable<PermanentCard> PermanentCards { get { return _permanentCards; } }
         public IEnumerable<BoostCard> BoostCards { get { return _boostCards; } }
+        public bool HasTeam { get; set; }
 
 
         public void AddAttackCard(AttackCard card)

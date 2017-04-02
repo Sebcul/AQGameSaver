@@ -19,7 +19,7 @@ namespace AQ.GameSaver.Tests.Cards.HeroCard
         {
             var heroCard = new GameSaver.Cards.HeroCard("Spike", 3, 2);
 
-            var attackCard = new AttackCard("Smashface", 1, AttackType.Melee, WeaponType.Hammer);
+            var attackCard = new AttackCard("Smashface", 1, 3, AttackType.Melee, WeaponType.Hammer);
             var boostCard = new BoostCard("Crushing Gauntlet", 3, BoostCardType.Gear);
             var permanentCard = new PermanentCard("Heart of the Unicorn", 0, PermanentCardType.Bling);
 
@@ -31,7 +31,7 @@ namespace AQ.GameSaver.Tests.Cards.HeroCard
 
 
 
-            Assert.IsTrue(heroCard.BoostCards.Count() == 0);
+            Assert.IsTrue(!heroCard.BoostCards.Any());
         }
     }
 }

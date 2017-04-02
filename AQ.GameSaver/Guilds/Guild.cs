@@ -24,12 +24,14 @@ namespace AQ.GameSaver.Guilds
         public Team Team { get; }
         public IEnumerable<HeroCard> Heroes { get { return _heroes; } }
         public List<DeathCurseCard> DeathCurses { get; }
+        public bool SavedMoney { get; set; }
 
 
         public void AddHero(HeroCard hero)
         {
             if (_heroes.Count < 3)
             {
+                hero.HasTeam = true;
                 _heroes.Add(hero);
             }
         }

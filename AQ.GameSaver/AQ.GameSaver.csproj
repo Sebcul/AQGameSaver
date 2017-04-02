@@ -53,10 +53,17 @@
     <Compile Include="Guilds\Guild.cs" />
     <Compile Include="Cards\HeroCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AttackCardRepository.cs" />
+    <Compile Include="Repositories\BoostCardRepository.cs" />
+    <Compile Include="Repositories\DeathCurseCardRepository.cs" />
     <Compile Include="Repositories\GuildRepository.cs" />
+    <Compile Include="Repositories\HeroCardRepository.cs" />
     <Compile Include="Repositories\Interfaces\IRepository.cs" />
+    <Compile Include="Repositories\PermanentCardRepository.cs" />
+    <Compile Include="Repositories\ScoreCardRepository.cs" />
     <Compile Include="Score Card\CampaignMap.cs" />
     <Compile Include="Score Card\Enums\CircleType.cs" />
+    <Compile Include="Score Card\MedalWinner.cs" />
     <Compile Include="Score Card\ScoreCard.cs" />
     <Compile Include="Score Card\Title.cs" />
   </ItemGroup>
