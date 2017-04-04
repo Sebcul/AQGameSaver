@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AQ.GameSaver.Cards;
 using AQ.GameSaver.Guilds.Enums;
+using AQ.GameSaver.Score_Card;
 
 namespace AQ.GameSaver.Guilds
 {
@@ -12,12 +13,13 @@ namespace AQ.GameSaver.Guilds
     {
         private List<HeroCard> _heroes;
 
-        public Guild(Team team)
+        public Guild(Team team, ScoreCard game)
         {
             _heroes = new List<HeroCard>();
             DeathCurses = new List<DeathCurseCard>();
             Id = Guid.NewGuid();
             Team = team;
+            Game = game;
         }
 
         public Guid Id { get; }
@@ -25,6 +27,7 @@ namespace AQ.GameSaver.Guilds
         public IEnumerable<HeroCard> Heroes { get { return _heroes; } }
         public List<DeathCurseCard> DeathCurses { get; }
         public bool SavedMoney { get; set; }
+        public ScoreCard Game { get; }
 
 
         public void AddHero(HeroCard hero)

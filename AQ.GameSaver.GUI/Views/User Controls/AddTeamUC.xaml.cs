@@ -10,25 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using AQ.GameSaver.GUI.Views.User_Controls;
-using AQ.GameSaver.Score_Card;
 
-namespace AQ.GameSaver.GUI.Views.Windows
+namespace AQ.GameSaver.GUI.Views.User_Controls
 {
     /// <summary>
-    /// Interaction logic for NewGame.xaml
+    /// Interaction logic for AddTeamUC.xaml
     /// </summary>
-    public partial class NewGame : Window
+    public partial class AddTeamUC : UserControl
     {
-        public NewGame()
+        public AddTeamUC()
         {
             InitializeComponent();
-        }
-
-        private void AddTeam_Click(object sender, RoutedEventArgs e)
-        {
-            ControlView.Content = new AddTeamUC();
         }
     }
 }
