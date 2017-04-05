@@ -8,6 +8,7 @@
         Title="MainWindow" Height="475" Width="625">
     <Grid>
         <Grid.RowDefinitions>
+            
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -57,6 +58,7 @@
         <Button Grid.Row="14" Content="New Game" VerticalAlignment="Bottom" Margin="3" Width="70" Click="NewGame_Button"/>
         <Button Grid.Row="14" Grid.Column="1" Content="Edit Guild" VerticalAlignment="Bottom" Margin="3"  Width="70" Click="EditGuild_Button"/>
         <Button Grid.Row="14" Grid.Column="5" Content="Save" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="3"  Width="70" Click="SaveScoreCard_Button"/>
+        <ComboBox Name="AllGames"  Grid.Column="3" Grid.Row="14" VerticalAlignment="Bottom" IsReadOnly="True" IsEditable="True" MaxWidth="90"/>
         
         <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" Name="DoHMapWinner"/>
         <ComboBox Grid.Column="2" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" Name="DoHMapLeastDeaths"/>

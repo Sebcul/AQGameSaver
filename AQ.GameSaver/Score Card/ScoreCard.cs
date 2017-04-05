@@ -42,6 +42,11 @@ namespace AQ.GameSaver.Score_Card
             _maps.Add(new CampaignMap("Evershadow District", CircleType.InnerCircle));
             _maps.Add(new CampaignMap("The Temple of Dawning Twilight", CircleType.FinalShowdown));
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 
 }

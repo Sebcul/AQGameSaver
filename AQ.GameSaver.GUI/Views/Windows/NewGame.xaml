@@ -9,22 +9,24 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="80.2"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" Margin="225.2,0,-286.4,0" >
+        <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <TextBlock Text="Game Name: " HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox Name="GameName" Width="70"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Name="GameName" Width="70"  HorizontalAlignment="Center" VerticalAlignment="Center" />
         </StackPanel>
-        <Button Content="Add Team" Margin="2,2,1.8,2" Click="AddTeam_Click"></Button>
+        
+        <StackPanel Orientation="Vertical">
+        <!--<Button Content="Add Team" Margin="2,2,1.8,2" Click="AddTeam_Click" Name="AddTeamButton"/>-->
+        <Button Content="Add Player" Margin="2,2,1.8,2" Click="AddPlayer_Click" Name="AddPlayerButton"/>
+        </StackPanel>
 
-        <UserControl Name="ControlView" Grid.Column="1"  Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="0.2,0,-0.2,0.4"/>
+        <UserControl Name="ControlView" Grid.Column="1"  Grid.Row="1" Grid.RowSpan="3" />
     </Grid>
 </Window>

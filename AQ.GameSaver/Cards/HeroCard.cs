@@ -78,5 +78,9 @@ namespace AQ.GameSaver.Cards
             }
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

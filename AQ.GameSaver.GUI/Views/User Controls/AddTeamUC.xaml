@@ -4,19 +4,111 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AQ.GameSaver.GUI.Views.User_Controls"
+             xmlns:parent="clr-namespace:AQ.GameSaver.GUI.Views.Windows"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             >
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="2" Text="BJASDJSJD"></TextBlock>
+        
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock  Text="Hero:" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroOne" Width="100"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Hero:" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroTwo" Width="100"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Hero:" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroThree" Width="100"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0"  VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroOneCardOne" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroOneCardTwo" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="0"  VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroOneCardThree" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroOneCardFour" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroTwoCardOne" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroTwoCardTwo" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroTwoCardThree" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroTwoCardFour" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroThreeCardOne" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroThreeCardTwo" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroThreeCardThree" Width="70"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Card slot 4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="HeroThreeCardFour" Width="70"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="0" Grid.Column="6" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock  Text="Team Color" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox Name="GuildTeam" Width="70"/>
+        </StackPanel>
+        <TextBlock Grid.Row="3" Grid.Column="2" Text="Player Name: "/>
+        <TextBox Name="PlayerName" Grid.Row="3" Grid.Column="3" Margin="3"/>
+        <Button Content="Save" Grid.Column="6" Width="70" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="SaveButton_Click" Grid.Row="3" Margin="3" />
+        <Button Content="Cancel" Grid.Column="5" Width="70" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="CancelButton_Click" Grid.Row="3" Margin="3"/>
     </Grid>
 </UserControl>
