@@ -13,7 +13,6 @@ namespace AQ.GameSaver.GUI
     public partial class MainWindow : Window
     {
         private ScoreCardRepository _scoreCardRepository;
-        private ScoreCardRepository _guildRepository;
 
         public ObservableCollection<ScoreCard> ScoreCards { get; }
 
@@ -34,9 +33,10 @@ namespace AQ.GameSaver.GUI
             newGameWindow.ShowDialog();
         }
 
-        private void EditGuild_Button(object sender, RoutedEventArgs e)
+        private void EditGames_Button(object sender, RoutedEventArgs e)
         {
-
+            var editGamesWindow = new EditGames();
+            editGamesWindow.ShowDialog();
         }
 
         private void SaveScoreCard_Button(object sender, RoutedEventArgs e)

@@ -56,13 +56,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\User Controls\AddFirstTeamUC.xaml.cs">
+      <DependentUpon>AddFirstTeamUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\User Controls\AddTeamUC.xaml.cs">
       <DependentUpon>AddTeamUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\EditGames.xaml.cs">
+      <DependentUpon>EditGames.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Windows\NewGame.xaml.cs">
       <DependentUpon>NewGame.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\User Controls\AddFirstTeamUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\User Controls\AddTeamUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\EditGames.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

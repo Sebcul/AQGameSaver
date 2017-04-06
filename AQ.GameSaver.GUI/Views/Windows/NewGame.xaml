@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AQ.GameSaver.GUI.Views.Windows"
         mc:Ignorable="d"
-        Title="NewGame" Height="350" Width="700">
+        Title="New Game" Height="350" Width="700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -13,18 +13,15 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
             <TextBlock Text="Game Name: " HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBox Name="GameName" Width="70"  HorizontalAlignment="Center" VerticalAlignment="Center" />
         </StackPanel>
-        
+
         <StackPanel Orientation="Vertical">
-        <!--<Button Content="Add Team" Margin="2,2,1.8,2" Click="AddTeam_Click" Name="AddTeamButton"/>-->
-        <Button Content="Add Player" Margin="2,2,1.8,2" Click="AddPlayer_Click" Name="AddPlayerButton"/>
         </StackPanel>
 
         <UserControl Name="ControlView" Grid.Column="1"  Grid.Row="1" Grid.RowSpan="3" />

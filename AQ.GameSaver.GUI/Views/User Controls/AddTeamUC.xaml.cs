@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using AQ.GameSaver.Cards;
 using AQ.GameSaver.Guilds;
 using AQ.GameSaver.Guilds.Enums;
@@ -30,63 +18,56 @@ namespace AQ.GameSaver.GUI.Views.User_Controls
     {
         private HeroCardRepository _heroCardRepository;
         private GuildRepository _guildRepository;
-        private ScoreCardRepository _scoreCardRepository;
 
         public AddTeamUC()
         {
             InitializeComponent();
             _heroCardRepository = HeroCardRepository._instance;
             _guildRepository = GuildRepository._instance;
-            _scoreCardRepository = ScoreCardRepository._instance;
 
             var allHeroes = _heroCardRepository.GetAll();
 
+            GuildTeam.ItemsSource = Enum.GetValues(typeof(Team));
 
             HeroOne.ItemsSource = allHeroes;
             HeroTwo.ItemsSource = allHeroes;
             HeroThree.ItemsSource = allHeroes;
-
-            GuildTeam.ItemsSource = Enum.GetValues(typeof(Team));
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             Window parentWindow = Window.GetWindow(this);
-            var newGameWindow = (NewGame)parentWindow;
+            var editGamesWindow = (EditGames)parentWindow;
 
-            if (newGameWindow != null)
+            var game = (ScoreCard)editGamesWindow.ListOfAllGames.SelectedItem;
+
+            if (game != null && GuildTeam.SelectedItem != null && PlayerName.Text != "")
             {
-                
-                string gameName = newGameWindow.GameName.Text;
+                var selectedTeam = (Team)GuildTeam.SelectedItem;
 
-                var scoreCard = new ScoreCard(gameName);
-
-                if (gameName != "" && GuildTeam.SelectedItem != null)
-                {
-                    SaveGame(newGameWindow, scoreCard);
-                    newGameWindow.GameName.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("Must add a team color and a game name.");
-                }
-            }
-        }
-
-        private void SaveGame(NewGame newGameWindow, ScoreCard scoreCard)
-        {
-            Guild guild;
-            if (IsScoreCardNameAvailable(scoreCard))
-            {
-                guild = new Guild((Team)GuildTeam.SelectedItem, scoreCard, PlayerName.Text);
-                AddHeroes(guild);
-                _guildRepository.Add(guild);
-                _scoreCardRepository.Add(scoreCard);
-                newGameWindow.AddPlayerButton.IsEnabled = true;
+                AddTeamToGame(game, selectedTeam, PlayerName.Text);
+                ClearWindow();
             }
             else
             {
-                MessageBox.Show("Game is already created.");
+                MessageBox.Show("Must add a team color and a game.");
+            }
+        }
+
+        private void AddTeamToGame(ScoreCard game, Team team, string playerName)
+        {
+            var guild = new Guild(team, game.Id, playerName);
+            var allGuildsInGame =_guildRepository.GetAll().Where(x => x.GameId == game.Id);
+
+
+            if (allGuildsInGame.Count(x => x.Team == guild.Team) > 0)
+            {
+                MessageBox.Show("There is already a team with that color in this game.");
+            }
+            else
+            {
+                AddHeroes(guild);
+                _guildRepository.Add(guild);
             }
         }
 
@@ -95,6 +76,7 @@ namespace AQ.GameSaver.GUI.Views.User_Controls
             var heroOne = (HeroCard)HeroOne.SelectedItem;
             var heroTwo = (HeroCard)HeroOne.SelectedItem;
             var heroThree = (HeroCard)HeroOne.SelectedItem;
+
             if (heroOne != null && heroTwo != null && heroThree != null)
             {
                 guild.AddHero(heroOne);
@@ -108,27 +90,13 @@ namespace AQ.GameSaver.GUI.Views.User_Controls
             
         }
 
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        private void ClearWindow()
         {
             Window parentWindow = Window.GetWindow(this);
+            var editGamesWindow = (EditGames)parentWindow;
 
-            Window mainWindowTest = Window.GetWindow(Application.Current.MainWindow);
-            var mainWindow = (MainWindow)mainWindowTest;
-
-            mainWindow.AllGames.ItemsSource = _scoreCardRepository.GetAll();
-
-            parentWindow?.Close();
+            editGamesWindow.AddTeamControlView.Content = null;
         }
 
-        private bool IsScoreCardNameAvailable(ScoreCard scoreCard)
-        {
-            var allScoreCards = _scoreCardRepository.GetAll();
-
-            if (allScoreCards.FirstOrDefault(sc => sc.Name == scoreCard.Name) == null)
-            {
-                return true;
-            }
-            return false;
-        }
     }
 }

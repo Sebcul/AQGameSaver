@@ -24,24 +24,8 @@ namespace AQ.GameSaver.GUI.Views.Windows
         public NewGame()
         {
             InitializeComponent();
+            ControlView.Content = new AddFirstTeamUC();
         }
 
-        private void AddTeam_Click(object sender, RoutedEventArgs e)
-        {
-            //var addTeamUC =new AddTeamUC();
-
-            //ControlView.Content = addTeamUC;
-
-            //AddTeamButton.IsEnabled = false;
-        }
-
-        private void AddPlayer_Click(object sender, RoutedEventArgs e)
-        {
-            var addTeamUC = new AddTeamUC();
-
-            ControlView.Content = addTeamUC;
-
-            AddPlayerButton.IsEnabled = false;
-        }
     }
 }

@@ -13,14 +13,14 @@ namespace AQ.GameSaver.Guilds
     {
         private List<HeroCard> _heroes;
 
-        public Guild(Team team, ScoreCard game, string playerName)
+        public Guild(Team team, Guid gameId, string playerName)
         {
             _heroes = new List<HeroCard>();
             DeathCurses = new List<DeathCurseCard>();
             Id = Guid.NewGuid();
             Team = team;
             PlayerName = playerName;
-            Game = game;
+            GameId = gameId;
         }
 
         public Guid Id { get; }
@@ -29,7 +29,7 @@ namespace AQ.GameSaver.Guilds
         public IEnumerable<HeroCard> Heroes { get { return _heroes; } }
         public List<DeathCurseCard> DeathCurses { get; }
         public bool SavedMoney { get; set; }
-        public ScoreCard Game { get; }
+        public Guid GameId { get; }
 
 
         public void AddHero(HeroCard hero)
