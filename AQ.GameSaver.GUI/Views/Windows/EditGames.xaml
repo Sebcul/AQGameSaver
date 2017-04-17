@@ -19,14 +19,18 @@
 
         <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3">
             <TextBlock Text="Game: " HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,3,3"/>
-            <ComboBox Width="100" Height="18" Name="ListOfAllGames"/>
+            <ComboBox Width="100" Height="18" Name="ListOfAllGames" SelectionChanged="ListOfAllGames_OnSelectionChanged"/>
+            <StackPanel Visibility="Hidden" Orientation="Horizontal" Name="GuildDropDown" Margin="10,0,0,0">
+            <TextBlock Text="Guild: " HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,3,3"/>
+            <ComboBox Width="100" Height="18" Name="ListOfAllGuildsInGame" SelectionChanged="ListOfAllGuildsInGame_OnSelectionChanged"/>
+            </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
             <Button Content="Add Team"  VerticalAlignment="Top" Margin="1" Click="AddTeamButton_OnClick"/>
             <Button Content="Edit Guilds" VerticalAlignment="Top" Margin="1" Click="EditGuildsButton_OnClick"/>
         </StackPanel>
-        <Button Content="Cancel" Grid.Row="1" Grid.Column="0" VerticalAlignment="Bottom" Margin="1" Click="Button_Click"/>
+        <Button Content="Cancel" Grid.Row="1" Grid.Column="0" VerticalAlignment="Bottom" Margin="3" Click="CancelButton_Click" />
         
         
         <UserControl Name="AddTeamControlView" Grid.Column="1" Grid.Row="1" Margin="3" />

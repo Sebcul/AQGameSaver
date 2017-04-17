@@ -40,5 +40,10 @@ namespace AQ.GameSaver.Guilds
                 _heroes.Add(hero);
             }
         }
+
+        public override string ToString()
+        {
+            return Team.ToString();
+        }
     }
 }

@@ -62,6 +62,9 @@
     <Compile Include="Views\User Controls\AddTeamUC.xaml.cs">
       <DependentUpon>AddTeamUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\User Controls\EditTeamUC.xaml.cs">
+      <DependentUpon>EditTeamUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Windows\EditGames.xaml.cs">
       <DependentUpon>EditGames.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\User Controls\AddTeamUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\User Controls\EditTeamUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
